@@ -1,0 +1,16 @@
+.card{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.card img{
+    width: 285px;
+    height: 380px;
+}
+
+.card .card-text{
+    height: 80px;
+    overflow: hidden;
+}

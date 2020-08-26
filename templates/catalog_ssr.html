@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}
+
+{% block styles %}
+
+    <link href="/static/css/catalog.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <h1>Our amazing catalog</h1>
+    <h3>With a total of {{ movies.count }} movies </h3>
+    
+    {% for movie in movies %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{movie.image_url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">{{movie.description}}</p>
+          <a href="/details/{{ movie.id }}" class="btn btn-primary">See details</a>
+        </div>
+      </div>
+      
+    {% endfor %}
+
+</div>
+
+{% endblock %}
